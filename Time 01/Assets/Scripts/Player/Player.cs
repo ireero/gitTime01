@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour {
    public Transform groundCheck;
    public Transform spawn_troca;
-   public float speed = 1.5f;
-   public float jumpForce = 80f;
+   protected float speed = 1.5f;
+   protected float jumpForce = 80f;
    public LayerMask whatIsGround;
  
    [HideInInspector]
@@ -16,30 +16,30 @@ public class Player : MonoBehaviour {
    public static bool player_morto;
  
    protected Rigidbody2D rb2d;
-   private bool isGrounded = false;
-   private bool jump = false;
+   protected bool isGrounded = false;
+   protected bool jump = false;
 
    protected Animator anim;
 
    public static bool pode_mexer;
 
-   private CapsuleCollider2D player_collider;
+   protected CapsuleCollider2D player_collider;
 
-   private SpriteRenderer sr;
+   protected SpriteRenderer sr;
 
-   private bool doubleJump;
+   protected bool doubleJump;
 
-   private Vector2 vetor_posicao;
+   protected Vector2 vetor_posicao;
    protected bool spawn_um;
 
    protected int n_quadrado;
 
    public GameObject[] quadrados;
    
-   private bool pode_trocar;
-   private GameObject objeto;
+   protected bool pode_trocar;
+   protected GameObject objeto;
 
-   private bool algo_em_cima;
+   protected bool algo_em_cima;
 
    public PhysicsMaterial2D segurar;
  
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour {
       }
    }
  
-   void move(){
+   protected virtual void move(){
       float horizontalForceButton = Input.GetAxis ("Horizontal");
       rb2d.velocity = new Vector2 (horizontalForceButton * speed, rb2d.velocity.y);
       isGrounded = Physics2D.OverlapCircle (groundCheck.position, 0.1f, whatIsGround);
@@ -104,7 +104,7 @@ public class Player : MonoBehaviour {
       }
    }
  
-   void Flip(){
+   public void Flip(){
       lookingRight = !lookingRight;
       Vector3 myScale = transform.localScale;
       myScale.x *= -1;

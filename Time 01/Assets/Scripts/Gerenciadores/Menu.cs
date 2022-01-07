@@ -18,6 +18,6 @@ public class Menu : MonoBehaviour
     }
 
     public void Jogar() {
-        SceneManager.LoadSceneAsync("Time01");
+        SceneManager.LoadSceneAsync(1);
     }
 }

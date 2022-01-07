@@ -5003,7 +5003,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358152474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.676, y: -1.399, z: 0}
+  m_LocalPosition: {x: 1.676, y: -1.377, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5291,7 +5291,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1960877125}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Time01, Assembly-CSharp
         m_MethodName: Reiniciar
         m_Mode: 1
@@ -6194,7 +6194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1960877126}
-  - component: {fileID: 1960877125}
+  - component: {fileID: 1960877127}
   m_Layer: 0
   m_Name: FaseManager
   m_TagString: Untagged
@@ -6202,19 +6202,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1960877125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960877124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ff6f47f1c8f1e44da03ef028c9f8f7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  painel_reiniciar: {fileID: 767549103}
 --- !u!4 &1960877126
 Transform:
   m_ObjectHideFlags: 0
@@ -6229,6 +6216,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1960877127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960877124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0088c109c4ddc4693f78443f51af8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  painel_reiniciar: {fileID: 767549103}
 --- !u!1001 &2016571158
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -32,16 +32,16 @@ public class SceneLoader : MonoBehaviour
 
     }
 
-    public void LoadSceneAsync(string sceneName) {
-    StartCoroutine(PerformLoadSceneAsync(sceneName));
+    public void LoadSceneAsync(int sceneBuild) {
+    StartCoroutine(PerformLoadSceneAsync(sceneBuild));
     }
 
-    private IEnumerator PerformLoadSceneAsync(string sceneName) {
+    private IEnumerator PerformLoadSceneAsync(int sceneBuild) {
 
         yield return StartCoroutine(FadeIn());
         
 
-        var operation = SceneManager.LoadSceneAsync(sceneName);
+        var operation = SceneManager.LoadSceneAsync(sceneBuild);
         while(operation.isDone == false) {
             yield return null;
         }
