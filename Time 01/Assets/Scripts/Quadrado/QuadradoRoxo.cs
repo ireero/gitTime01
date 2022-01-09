@@ -37,7 +37,7 @@ public class QuadradoRoxo : Quadrados
         } else if(other.gameObject.CompareTag("chao") || other.gameObject.CompareTag("Player") 
         || other.gameObject.CompareTag("plataforma") || other.gameObject.CompareTag("btn")) {
             lancou = false;
-        } else if(other.gameObject.CompareTag("armadilha")) {
+        } else if(other.gameObject.CompareTag("armadilha") || other.gameObject.CompareTag("bullet_player")) {
             Destroy(gameObject);
         }
     }

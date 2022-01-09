@@ -124,6 +124,8 @@ public class Player : MonoBehaviour {
          Destroy(gameObject);
       } else if(other.gameObject.CompareTag("plataforma_move")) {
          player_collider.sharedMaterial = segurar;
+      } else if(other.gameObject.CompareTag("bullet_player")) {
+         Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
       }
    }
 

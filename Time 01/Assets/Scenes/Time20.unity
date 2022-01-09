@@ -4970,6 +4970,18 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 192859846, guid: 2bdf583b5e978404cb59b5690da050c2, type: 3}
+      propertyPath: quadrados.Array.data[0]
+      value: 
+      objectReference: {fileID: 5238967224900661665, guid: 9b76beb13d52815429533d10f8312afd, type: 3}
+    - target: {fileID: 192859846, guid: 2bdf583b5e978404cb59b5690da050c2, type: 3}
+      propertyPath: quadrados.Array.data[1]
+      value: 
+      objectReference: {fileID: 6029567908515149311, guid: c77d1ad4bd0609d498e2e90a7132690d, type: 3}
+    - target: {fileID: 192859846, guid: 2bdf583b5e978404cb59b5690da050c2, type: 3}
+      propertyPath: quadrados.Array.data[2]
+      value: 
+      objectReference: {fileID: 3872024226886408744, guid: aec982c5837a452469baa041663c8da8, type: 3}
+    - target: {fileID: 192859846, guid: 2bdf583b5e978404cb59b5690da050c2, type: 3}
       propertyPath: quadrados.Array.data[3]
       value: 
       objectReference: {fileID: 4454243756266196020, guid: 7015085b88526144985a11868e66b85c, type: 3}
@@ -6583,6 +6595,18 @@ PrefabInstance:
     - target: {fileID: 425533051337252270, guid: d424cf8abdd7b024d8743aae63dc0c3b, type: 3}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425533051337252270, guid: d424cf8abdd7b024d8743aae63dc0c3b, type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034075187674604672, guid: d424cf8abdd7b024d8743aae63dc0c3b, type: 3}
+      propertyPath: velocidade_mexer
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034075187674604679, guid: d424cf8abdd7b024d8743aae63dc0c3b, type: 3}
+      propertyPath: m_Angle
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3034075187674604679, guid: d424cf8abdd7b024d8743aae63dc0c3b, type: 3}
       propertyPath: m_ConnectedAnchor.x

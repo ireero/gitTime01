@@ -15,6 +15,7 @@ TagManager:
   - quadrado3
   - quadrado4
   - plataforma_move
+  - bullet_player
   layers:
   - Default
   - TransparentFX

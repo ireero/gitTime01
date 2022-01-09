@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1596516400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596516401}
+  m_Layer: 7
+  m_Name: spawn_tiros
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1596516401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596516400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.117, y: 0.049, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5715391082408189170}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7821356412324280619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,8 +44,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 5715391081399058407}
   spawn_troca: {fileID: 8318487401240183879}
-  speed: 1.5
-  jumpForce: 80
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
@@ -25,6 +53,8 @@ MonoBehaviour:
   - {fileID: 3872024226886408744, guid: aec982c5837a452469baa041663c8da8, type: 3}
   - {fileID: 4454243756266196020, guid: 7015085b88526144985a11868e66b85c, type: 3}
   segurar: {fileID: 6200000, guid: b7b0f2f9af215db46bb5e33a7cb32899, type: 2}
+  spawn_tiro: {fileID: 1596516401}
+  tiro_player: {fileID: 8065523214926782413, guid: 945691528396d5248b2f2fb72f0d9566, type: 3}
 --- !u!1001 &7821356411436861148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80,6 +110,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.32
       objectReference: {fileID: 0}
+    - target: {fileID: 2583429974066395396, guid: 39d171c970246944b9e87f4af042d3f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2583429975202535970, guid: 39d171c970246944b9e87f4af042d3f6, type: 3}
       propertyPath: m_Controller
       value: 
@@ -94,11 +128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2583429975202535982, guid: 39d171c970246944b9e87f4af042d3f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.44
+      value: -2.58
       objectReference: {fileID: 0}
     - target: {fileID: 2583429975202535982, guid: 39d171c970246944b9e87f4af042d3f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 2583429975202535982, guid: 39d171c970246944b9e87f4af042d3f6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -166,6 +200,11 @@ PrefabInstance:
 --- !u!1 &5715391082408189172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2583429975202535976, guid: 39d171c970246944b9e87f4af042d3f6, type: 3}
+  m_PrefabInstance: {fileID: 7821356411436861148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5715391082408189170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2583429975202535982, guid: 39d171c970246944b9e87f4af042d3f6, type: 3}
   m_PrefabInstance: {fileID: 7821356411436861148}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5715391081399058407 stripped
