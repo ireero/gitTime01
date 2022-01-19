@@ -16,17 +16,11 @@ public class Tiro : MonoBehaviour
         Destroy(gameObject, tempo_para_morrer);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == gameObject.tag || 
-        other.gameObject.CompareTag("quadrado") || other.gameObject.CompareTag("quadrado2")  || other.gameObject.CompareTag("quadrado3") || 
-        other.gameObject.CompareTag("bullet_player")) {
+    protected virtual void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("quadrado") || other.gameObject.CompareTag("quadrado2")  || other.gameObject.CompareTag("quadrado3")) {
             Destroy(gameObject);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Player")) {
-            Destroy(gameObject);
+        } else if(other.gameObject.tag == gameObject.tag) {
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
     }
 

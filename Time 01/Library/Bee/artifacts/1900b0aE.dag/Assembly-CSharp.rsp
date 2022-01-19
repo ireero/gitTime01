@@ -351,6 +351,7 @@
 "Assets/Scripts/btn/Btn.cs"
 "Assets/Scripts/btn/Btn2.cs"
 "Assets/Scripts/btn/BtnAzul.cs"
+"Assets/Scripts/btn/BtnVermelho.cs"
 "Assets/Scripts/Circulo/Circulo.cs"
 "Assets/Scripts/Gerenciadores/Fases/FaseManager.cs"
 "Assets/Scripts/Gerenciadores/Menu.cs"

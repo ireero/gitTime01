@@ -9,16 +9,7 @@ public class Player04 : Player03
     public GameObject tiro_player;
     protected float cont = 0;
 
-    protected virtual void Update()
-    {
-        base.Update();
-        if(isGrounded && pulando) {
-            pulando = false;
-        }
-    }
-
     protected override void move(){
-        base.move();
         float horizontalForceButton = Input.GetAxis ("Horizontal");
         rb2d.velocity = new Vector2 (horizontalForceButton * speed, rb2d.velocity.y);
         isGrounded = Physics2D.OverlapCircle (groundCheck.position, 0.1f, whatIsGround);
@@ -35,6 +26,7 @@ public class Player04 : Player03
 
         if (jump) {
             rb2d.AddForce(new Vector2(0, jumpForce));
+            anim.SetBool("pulou", true);
             pulando = true;
             jump = false;
         }
@@ -51,6 +43,16 @@ public class Player04 : Player03
 
     }
 
+    protected override void identificarChao() {
+      if(isGrounded && pulando) {
+            pulando = false;
+            doubleJump = true;
+            anim.SetBool("pulou", false);
+        } else if(isGrounded) {
+            doubleJump = true;
+        }
+   }
+    
     void Fire() {
 		GameObject cloneBullet = Instantiate(tiro_player, spawn_tiro.position, spawn_tiro.rotation);
 

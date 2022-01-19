@@ -95,6 +95,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1950839783258223039, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950839783258223039, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1950839783258223038, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}

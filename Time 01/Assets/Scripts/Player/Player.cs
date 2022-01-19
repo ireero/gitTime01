@@ -64,20 +64,12 @@ public class Player : MonoBehaviour {
          move ();
       }
 
-      if(isGrounded) {
-         doubleJump = true;
-      }
+      identificarChao();
    }
  
-   void inputCheck (){
-      if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded){
-      jump = true;
-      } else if(((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded)) {
-         jump = true;
-      } else if((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && !isGrounded && doubleJump) {
-            jump = true;
-            doubleJump = false;
-      }
+   void inputCheck () {
+
+      puloMecanica();
 
       if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
          if(pode_trocar) {
@@ -101,6 +93,23 @@ public class Player : MonoBehaviour {
       if (jump) {
          rb2d.AddForce(new Vector2(0, jumpForce));
          jump = false;
+      }
+   }
+
+   protected virtual void puloMecanica() {
+      if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded) {
+      jump = true;
+      } else if(((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded)) {
+         jump = true;
+      } else if((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && !isGrounded && doubleJump) {
+            jump = true;
+            doubleJump = false;
+      }
+   }
+
+   protected virtual void identificarChao() {
+      if(isGrounded) {
+         doubleJump = true;
       }
    }
  

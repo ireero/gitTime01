@@ -25,11 +25,12 @@ public class Btn : MonoBehaviour
                 anim.SetBool("apertado", true);
                 liberado++;
                 }
+                apertado++;
             }
-            apertado++;
+            
     }
 
-    private void OnCollisionExit2D(Collision2D other) {
+    protected virtual void OnCollisionExit2D(Collision2D other) {
         if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("quadrado") || 
         other.gameObject.CompareTag("quadrado2") || other.gameObject.CompareTag("quadrado3") || other.gameObject.CompareTag("quadrado4")) {
             if(apertado == 1) {

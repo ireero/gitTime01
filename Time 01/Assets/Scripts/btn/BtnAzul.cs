@@ -7,7 +7,7 @@ public class BtnAzul : Btn
     public GameObject objeto;
     private bool ativado;
 
-    void Awake()
+    protected virtual void Awake()
     {
         base.Awake();
         if(objeto.activeSelf == true) {
@@ -18,12 +18,12 @@ public class BtnAzul : Btn
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         MudarEstado(ativado);
     }
 
-    private void MudarEstado(bool estado) {
+    protected virtual void MudarEstado(bool estado) {
         if(estado) {
             if(apertado == 1) {
                 objeto.SetActive(false);

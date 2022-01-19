@@ -43,6 +43,10 @@ PrefabInstance:
       value: tiro_player Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1950839783258223027, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950839783258223027, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}
       propertyPath: m_TagString
       value: bullet_player
       objectReference: {fileID: 0}
@@ -94,6 +98,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1074290f3400aea48b73adb07104710b, type: 3}
+    - target: {fileID: 1950839783258223039, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950839783258223039, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1950839783258223039, guid: b45f8523a7a07f243b252b2e40a26b1a, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
