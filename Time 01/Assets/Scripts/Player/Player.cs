@@ -42,8 +42,11 @@ public class Player : MonoBehaviour {
    protected bool algo_em_cima;
 
    public PhysicsMaterial2D segurar;
+
+   protected bool abaixado;
  
    void Start () {  
+      abaixado = false;
       spawn_um = false;
       pode_trocar = false;
       pode_mexer = true;
@@ -68,18 +71,9 @@ public class Player : MonoBehaviour {
    }
  
    void inputCheck () {
-
       puloMecanica();
-
-      if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
-         if(pode_trocar) {
-            Trocar(objeto);
-         }
-         anim.SetBool("abaixar", true);
-      } else {
-          anim.SetBool("abaixar", false);
+      ficarAbaixado();
       }
-   }
  
    protected virtual void move(){
       float horizontalForceButton = Input.GetAxis ("Horizontal");
@@ -93,6 +87,19 @@ public class Player : MonoBehaviour {
       if (jump) {
          rb2d.AddForce(new Vector2(0, jumpForce));
          jump = false;
+      }
+   }
+
+   protected virtual void ficarAbaixado() {
+      if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
+         if(pode_trocar) {
+            Trocar(objeto);
+         }
+         anim.SetBool("abaixar", true);
+         speed = 0.8f;
+      } else {
+          anim.SetBool("abaixar", false);
+         speed = 1.5f;
       }
    }
 
@@ -182,5 +189,5 @@ public class Player : MonoBehaviour {
       vetor_posicao = colisor.gameObject.transform.position;
       objeto = colisor.gameObject;
    }
-
+   
 }
