@@ -25,9 +25,8 @@ public class Btn : MonoBehaviour
                 anim.SetBool("apertado", true);
                 liberado++;
                 }
-                apertado++;
             }
-            
+            apertado++;
     }
 
     protected virtual void OnCollisionExit2D(Collision2D other) {

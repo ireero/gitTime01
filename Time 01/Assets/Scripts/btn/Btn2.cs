@@ -1,4 +1,4 @@
-public class Btn2 : Btn
+ public class Btn2 : Btn
 {
     protected override void Awake() {
         base.Awake();
